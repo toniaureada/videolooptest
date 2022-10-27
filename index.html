@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<video width="320" height="240" autoplay controls loop>
+  <source src="test.mp4" type="video/mp4">
+</video>
+
+
+<script>
+
+
+
+
+window.addEventListener('load', function(){
+    var newVideo = document.getElementById('videoElementId');
+    newVideo.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+    }, true);
+
+    newVideo.play();
+
+});
+</script>
+
+</body>
+</html>
